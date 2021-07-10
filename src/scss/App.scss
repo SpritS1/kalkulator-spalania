@@ -1,0 +1,195 @@
+@use './base/fonts.scss' as *;
+@use './base/variables.scss' as *;
+
+@mixin input {
+  padding: .25rem;
+  border: .5px solid $black;
+  border-radius: 8px;
+  text-align: center;
+  outline: none;
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  &:focus {
+    box-shadow: 0 0 5px rgb(68, 117, 192);
+    border: 1px solid rgb(68, 117, 192);
+
+  }
+}
+
+.app {
+    width: 100%;
+    min-height: 100vh;
+    background: $white;
+  }
+
+  .header {
+    padding: 1rem;
+    font-size: 1.5rem;
+    background: $blue;
+    color: white;
+  }
+
+  .home {
+    max-width: 1200px;
+    margin: 1rem auto 0 auto;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns:  1fr;
+    grid-template-rows: auto;
+    gap: 2rem;
+  }
+
+  .calculator {
+    grid-column: 1;
+
+    .gas-price {
+      background: $gray;
+      color: white;
+      padding: 1rem;
+      border-radius: 8px;
+      margin-bottom: 2rem;
+      box-shadow: $box-shadow;
+      text-align: center;
+
+      &__label {
+        margin: {
+          left: .25rem;
+        }
+      }
+
+      &__input {
+        width: 50px;
+        @include input;
+      }
+
+    }
+
+    .formula {
+      background: $white-accent;
+      border-radius: 16px;
+      padding: 1rem;
+      box-shadow: $box-shadow;
+    
+      &__title {
+        font-size: 1.25rem;
+        margin-bottom: 1.5rem;
+      }
+
+      &__form {
+        display: flex;
+        flex-direction: column;
+      }
+
+      &__label {
+        margin-bottom: .5rem;
+      }
+
+      &__input {
+        @include input;
+        margin-bottom: 1rem;
+      }
+
+      &__result-section {
+        margin-top: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 16px;
+        padding: .5rem;
+        background: $blue;
+        color: $white;
+      }
+
+      &__result {
+        @include input;
+        pointer-events: none;
+        width: 75px;
+        margin: 0 .25rem;
+        font-weight: bold;
+      }
+  }
+}
+
+.info {
+  grid-column: 1;
+  height: fit-content;
+  background-color: $white-accent;
+  box-shadow: $box-shadow;
+  border-radius: 16px;
+  padding: 1rem;
+
+  &__title {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+  &__text {
+    margin-bottom: 1rem;
+  }
+}
+
+.blog {
+  grid-column: 1;
+  background: $white-accent;
+  border-radius: 16px;
+  padding: 1rem;
+  box-shadow: $box-shadow;
+
+  &__title {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+}
+
+.article {
+  margin-bottom: 2rem;
+
+  &__title {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.footer {
+  background: $gray;
+  color: $white;
+  min-height: 2rem;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__copyright {
+    font-size: .9rem;
+  }
+}
+
+@media (min-width: $breakpoint-tablet) {
+  .home {
+    grid-template-columns:  repeat(12, 1fr);
+    padding: 1rem 2rem;
+  }
+
+  .calculator {
+    grid-column: 1 / 7;
+  }
+
+  .info {
+    grid-column: 7 / 13;
+  }
+
+  .blog {
+    grid-column: 1 / 10;
+  }
+}
+
+@media (min-width: $breakpoint-dekstop) {
+
+}
+
+  
