@@ -8,13 +8,13 @@
 .app {
   width: 100%;
   min-height: 100vh;
-  background: #EDEDED;
+  background: #f2f2f2;
 }
 
 .header {
   padding: 1rem;
   font-size: 1.5rem;
-  background: #334257;
+  background: #394960;
   color: white;
 }
 
@@ -31,42 +31,14 @@
 .calculator {
   grid-column: 1;
 }
-.calculator .gas-price {
-  background: #444444;
-  color: white;
-  padding: 1rem;
-  border-radius: 8px;
-  margin-bottom: 2rem;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  text-align: center;
-}
-.calculator .gas-price__label {
-  margin-left: 0.25rem;
-}
-.calculator .gas-price__input {
-  width: 50px;
-  padding: 0.25rem;
-  border: 0.5px solid #171717;
-  border-radius: 8px;
-  text-align: center;
-  outline: none;
-}
-.calculator .gas-price__input::-webkit-outer-spin-button, .calculator .gas-price__input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-.calculator .gas-price__input:focus {
-  box-shadow: 0 0 5px #4475c0;
-  border: 1px solid #4475c0;
-}
 .calculator .formula {
-  background: #d9d9d9;
+  background: white;
   border-radius: 16px;
   padding: 1rem;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .calculator .formula__title {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   margin-bottom: 1.5rem;
 }
 .calculator .formula__form {
@@ -74,58 +46,68 @@
   flex-direction: column;
 }
 .calculator .formula__label {
+  font-size: 0.95rem;
+  margin-top: 1rem;
   margin-bottom: 0.5rem;
 }
+.calculator .formula__label:first-child {
+  margin-top: 0;
+}
 .calculator .formula__input {
-  padding: 0.25rem;
-  border: 0.5px solid #171717;
+  padding: 0.5rem;
+  border: none;
+  background-color: white;
   border-radius: 8px;
-  text-align: center;
   outline: none;
-  margin-bottom: 1rem;
+  width: 100%;
 }
 .calculator .formula__input::-webkit-outer-spin-button, .calculator .formula__input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-.calculator .formula__input:focus {
-  box-shadow: 0 0 5px #4475c0;
-  border: 1px solid #4475c0;
+.calculator .formula__input-wrapper {
+  background: white;
+  border: 0.5px solid #171717;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px #454545 solid;
+  cursor: text;
+}
+.calculator .formula__input-unit {
+  padding-right: 0.5rem;
+  display: block;
+  white-space: nowrap;
+}
+.calculator .formula__result-name {
+  margin-right: 0.5rem;
 }
 .calculator .formula__result-section {
-  margin-top: 1rem;
+  margin-top: 2rem;
+  align-self: center;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 16px;
-  padding: 0.5rem;
-  background: #334257;
-  color: #EDEDED;
+  padding: 0.5rem 2rem;
+  background: #394960;
+  color: white;
 }
-.calculator .formula__result {
-  padding: 0.25rem;
-  border: 0.5px solid #171717;
-  border-radius: 8px;
+.calculator .formula__input-unit {
+  color: #171717;
+}
+.calculator .formula .result {
   text-align: center;
-  outline: none;
   pointer-events: none;
-  width: 75px;
-  margin: 0 0.25rem;
-  font-weight: bold;
-}
-.calculator .formula__result::-webkit-outer-spin-button, .calculator .formula__result::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-.calculator .formula__result:focus {
-  box-shadow: 0 0 5px #4475c0;
-  border: 1px solid #4475c0;
+  min-width: 50px;
+  width: 90px;
 }
 
 .info {
   grid-column: 1;
   height: fit-content;
-  background-color: #d9d9d9;
+  background-color: #f2f2f2;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border-radius: 16px;
   padding: 1rem;
@@ -140,7 +122,7 @@
 
 .blog {
   grid-column: 1;
-  background: #d9d9d9;
+  background: white;
   border-radius: 16px;
   padding: 1rem;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -159,8 +141,8 @@
 }
 
 .footer {
-  background: #444444;
-  color: #EDEDED;
+  background: #454545;
+  color: white;
   min-height: 2rem;
   padding: 1rem;
   display: flex;
@@ -171,6 +153,15 @@
   font-size: 0.9rem;
 }
 
+@media (min-width: 768px) {
+  .calculator .formula {
+    padding: 2rem;
+  }
+
+  .blog {
+    padding: 2rem;
+  }
+}
 @media (min-width: 992px) {
   .home {
     grid-template-columns: repeat(12, 1fr);
@@ -181,12 +172,8 @@
     grid-column: 1/7;
   }
 
-  .info {
-    grid-column: 7/13;
-  }
-
   .blog {
-    grid-column: 1/13;
+    grid-column: 7/13;
   }
 }
 
