@@ -1,4 +1,5 @@
 import FuelCalc from './components/FuelCalc';
+import FuelPrices from './components/FuelPrices';
 import Footer from './components/Footer';
 import './css/App.css';
 
@@ -8,12 +9,8 @@ function App() {
       <h1 className='header'> Kalkulator spalania <i className="fas fa-car fa-lg"></i></h1>
       <div className="home">
         <FuelCalc />
-{/* 
-        <div className="info">
-          <h3 className="info__title">Kalkulator spalania paliwa</h3>
-          <p className="info__text">Kalkulator oblicza zużycie paliwa na podanej długości trasy i średnim spalaniu, po czym oblicza koszt przejechania trasy.</p>
-          <div className="info_text">Po wprowadzeniu danych kalkulator automatycznie wyliczy pożądaną wartość.</div>
-        </div> */}
+
+        <FuelPrices />
 
         <section className="blog">
           <h2 className="blog__title">Jak zmniejszyc spalanie paliwa?</h2>

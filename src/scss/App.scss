@@ -43,29 +43,6 @@
   .calculator {
     grid-column: 1;
 
-    // .gas-price {
-    //   background: $gray;
-    //   color: white;
-    //   padding: 1rem;
-    //   border-radius: 8px;
-    //   margin-bottom: 2rem;
-    //   box-shadow: $box-shadow;
-    //   text-align: center;
-
-    //   &__label {
-    //     margin: {
-    //       left: .25rem;
-    //     }
-    //   }
-
-    //   &__input {
-    //     width: 50px;
-    //     text-align: center;
-    //     @include input;
-    //   }
-
-    // }
-
     .formula {
       background: $white;
       border-radius: 16px;
@@ -143,23 +120,87 @@
   }
 }
 
-.info {
+.fuel-prices {
   grid-column: 1;
-  height: fit-content;
-  background-color: $white-accent;
+  grid-row: 2;
+  background: $white;
   box-shadow: $box-shadow;
   border-radius: 16px;
   padding: 1rem;
 
-  &__title {
-    font-size: 1.25rem;
+  h2 {
+    font-size: 1.5rem;
+    text-align: center;
     margin-bottom: 1rem;
   }
 
-  &__text {
-    margin-bottom: 1rem;
+  &__prices {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+
+  .price {
+    cursor: pointer;
+    padding: 1rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &:first-child {
+      background-color: hsl(120, 100%, 30%);
+    }
+    
+    &:nth-child(2) {
+      background: hsl(120, 100%, 26%);
+    }
+
+    &:nth-child(3) {
+      background: hsl(0, 0%, 20%);
+    }
+
+    &:nth-child(4) {
+      background: hsl(0, 0%, 15%);
+
+    }
+
+    &:nth-child(5) {
+      background: hsl(212, 100%, 60%);
+    }
+
+    &:hover {
+      opacity: 90%;
+    }
+
+    &__fuel-name {
+      margin-bottom: .5rem;
+    }
+
+    &__amount {
+      font-size: 1.25rem;
+      font-weight: bold;
+    }
   }
 }
+
+// .info {
+//   grid-column: 1;
+//   height: fit-content;
+//   background-color: $white-accent;
+//   box-shadow: $box-shadow;
+//   border-radius: 16px;
+//   padding: 1rem;
+
+//   &__title {
+//     font-size: 1.25rem;
+//     margin-bottom: 1rem;
+//   }
+
+//   &__text {
+//     margin-bottom: 1rem;
+//   }
+// }
 
 .blog {
   grid-column: 1;
@@ -204,6 +245,14 @@
     }
   }
 
+  .fuel-prices {
+    padding: 2rem;
+
+    h2 {
+      margin-bottom: 2rem;
+    }
+  }
+
   .blog {
     padding: 2rem;
   }
@@ -217,11 +266,17 @@
 
   .calculator {
     grid-column: 1 / 7;
+    grid-row: 1;
   }
 
+  .fuel-prices {
+    grid-column: 1 / 7;
+    grid-row: 2;
+  }
 
   .blog {
     grid-column: 7 / 13;
+    grid-row: 1 / 4;
   }
 }
   

@@ -104,20 +104,56 @@
   width: 90px;
 }
 
-.info {
+.fuel-prices {
   grid-column: 1;
-  height: fit-content;
-  background-color: #f2f2f2;
+  grid-row: 2;
+  background: white;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border-radius: 16px;
   padding: 1rem;
 }
-.info__title {
-  font-size: 1.25rem;
+.fuel-prices h2 {
+  font-size: 1.5rem;
+  text-align: center;
   margin-bottom: 1rem;
 }
-.info__text {
-  margin-bottom: 1rem;
+.fuel-prices__prices {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+.fuel-prices .price {
+  cursor: pointer;
+  padding: 1rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.fuel-prices .price:first-child {
+  background-color: #009900;
+}
+.fuel-prices .price:nth-child(2) {
+  background: #008500;
+}
+.fuel-prices .price:nth-child(3) {
+  background: #333333;
+}
+.fuel-prices .price:nth-child(4) {
+  background: #262626;
+}
+.fuel-prices .price:nth-child(5) {
+  background: #3392ff;
+}
+.fuel-prices .price:hover {
+  opacity: 90%;
+}
+.fuel-prices .price__fuel-name {
+  margin-bottom: 0.5rem;
+}
+.fuel-prices .price__amount {
+  font-size: 1.25rem;
+  font-weight: bold;
 }
 
 .blog {
@@ -158,6 +194,13 @@
     padding: 2rem;
   }
 
+  .fuel-prices {
+    padding: 2rem;
+  }
+  .fuel-prices h2 {
+    margin-bottom: 2rem;
+  }
+
   .blog {
     padding: 2rem;
   }
@@ -170,10 +213,17 @@
 
   .calculator {
     grid-column: 1/7;
+    grid-row: 1;
+  }
+
+  .fuel-prices {
+    grid-column: 1/7;
+    grid-row: 2;
   }
 
   .blog {
     grid-column: 7/13;
+    grid-row: 1/4;
   }
 }
 
