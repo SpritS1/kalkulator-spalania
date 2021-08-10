@@ -1,4 +1,4 @@
-const FuelPrices = () => {
+const FuelPrices = ({fuelPrice, setFuelPrice}) => {
     const fuelPrices = [
         {
             id: 1,
@@ -37,16 +37,16 @@ const FuelPrices = () => {
             <h2>Aktualne ceny paliw</h2>
             <div className="fuel-prices__prices">
                 {fuelPrices.map(({id, name, price, currency, color}) => {
-                   return <Price name={name} price={price} currency={currency} color={color} key={id}/>
+                   return <Price setFuelPrice={setFuelPrice} name={name} price={price} currency={currency} color={color} key={id}/>
                 })}
             </div>
         </div>
      );
 }
 
-const Price = ({name, price, currency, color}) => {
+const Price = ({name, price, currency, color, setFuelPrice}) => {
     return (
-        <div className="price" style={{color: color}} onClick={() => {navigator.clipboard.writeText(price)}}>
+        <div className="price" style={{color: color}} onClick={() => setFuelPrice(price)}>
             <span className='price__fuel-name'>{name}</span>
             <span className="price__amount">{price + ' ' + currency}</span>
             {/* <span className="price__currency">zł</span> */}

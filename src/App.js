@@ -1,16 +1,18 @@
 import FuelCalc from './components/FuelCalc';
 import FuelPrices from './components/FuelPrices';
 import Footer from './components/Footer';
+import { useState, useEffect } from 'react';
 import './css/App.css';
 
 function App() {
+  const [fuelPrice, setFuelPrice] = useState('');
+
   return (
     <div className="app">
       <h1 className='header'> Kalkulator spalania <i className="fas fa-car fa-lg"></i></h1>
       <div className="home">
-        <FuelCalc />
-
-        <FuelPrices />
+        <FuelCalc fuelPrice={fuelPrice} setFuelPrice={setFuelPrice}/>
+        <FuelPrices setFuelPrice={setFuelPrice}/>
 
         <section className="blog">
           <h2 className="blog__title">Jak zmniejszyc spalanie paliwa?</h2>

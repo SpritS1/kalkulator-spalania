@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
-const FuelCalc = () => {
-    const [fuelPrice, setFuelPrice] = useState('');
+const FuelCalc = ({fuelPrice, setFuelPrice}) => {
+    // const [fuelPrice, setFuelPrice] = useState('');
     const [distance, setDistance] = useState('');
     const [avgFuelUsage, setAvgFuelUsage] = useState('');
     const [fuelCost, setFuelCost] = useState('');
@@ -24,12 +24,6 @@ const FuelCalc = () => {
 
     return ( 
         <div className="calculator">
-            {/* <div className="gas-price">
-                <i className="fas fa-gas-pump fa-lg"/>
-                <label htmlFor="fuel-price" className='gas-price__label'>Cena za 1l paliwa: </label>
-                    <input type="number" className="gas-price__input" id='fuel-price' min='0' value={fuelPrice} onChange={(e) => setFuelPrice(e.target.value)}/>
-                    <span className='gas-price__currency'> zł</span>                     */
-            /* </div> */}
             <div className="formula">
                 <h3 className='formula__title'>Koszt przejechania trasy</h3>
                 <form className='formula__form'>
