@@ -6,14 +6,16 @@ $gray: hsl(0, 0%, 27%);
 $light-gray: hsl(0, 0%, 80%);
 $white-accent: hsl(0, 0%, 95%);
 $white: hsl(0, 0%, 100%);
-$red: hsl(345, 100%, 43%);
+// $red: hsl(345, 100%, 43%);
 $blue: hsl(215, 26%, 30%);
 
 // Dark theme
 
 $bg-dark: hsl(0, 0%, 15%);
 $bg-accent-dark: hsl(0, 0%, 20%);
-$accent-dark: #324B4C;
+// $accent-dark: #324B4C;
+$accent-dark: hsl(35, 80%, 38%);
+
 $text-dark: hsl(0, 0%, 85%);
 $input-bg: hsl(0, 0%, 25%);
 
@@ -21,13 +23,15 @@ $input-bg: hsl(0, 0%, 25%);
 
 $text: $black;
 
-    $background-accent: $white;
-    $accent-color: $blue;
-    $font-color-opposite: $white;
+$background-accent: $white;
+$accent-color: $blue;
+$font-color-opposite: $white;
 
+// Other
 $border-radius: 16px;
 $box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
+// Breakpoints
 $breakpoint-mobile: 576px;
 $breakpoint-tablet: 768px;
 $breakpoint-desktop: 992px;
