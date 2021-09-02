@@ -3,13 +3,14 @@ import FuelPrices from './components/FuelPrices';
 import Footer from './components/Footer';
 import { useState, useEffect } from 'react';
 import './css/App.css';
+import Navbar from './components/Navbar/Navbar';
 
 function App() {
   const [fuelPrice, setFuelPrice] = useState('');
 
   return (
     <div className="app">
-      <h1 className='header'> Kalkulator spalania <i className="fas fa-car fa-lg"></i></h1>
+      <Navbar />
       <div className="home">
         <FuelCalc fuelPrice={fuelPrice} setFuelPrice={setFuelPrice}/>
         <FuelPrices setFuelPrice={setFuelPrice}/>

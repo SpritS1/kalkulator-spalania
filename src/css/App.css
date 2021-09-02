@@ -5,17 +5,50 @@
   font-size: 16px;
 }
 
+* {
+  transition: background-color 0.2s;
+  transition: color 0.1s;
+}
+
+.app.dark-theme {
+  background: #262626;
+}
+
 .app {
   width: 100%;
   min-height: 100vh;
-  background: #f2f2f2;
+  transition: background-color 0.2s;
 }
 
-.header {
+.navbar.dark-theme {
+  background: #324B4C;
+  color: white;
+}
+
+.navbar {
   padding: 1rem;
-  font-size: 1.5rem;
   background: #394960;
   color: white;
+}
+.navbar__content {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+}
+.navbar__page-name {
+  font-size: 1.5rem;
+  padding: 0.5rem;
+}
+.navbar__theme-icon {
+  font-size: 2rem;
+  padding: 0.5rem;
+  transition: 0.2s;
+}
+.navbar__theme-icon:hover {
+  color: #cccccc;
+  cursor: pointer;
 }
 
 .home {
@@ -30,6 +63,10 @@
 
 .calculator {
   grid-column: 1;
+}
+.calculator .formula.dark-theme {
+  background: #333333;
+  color: #d9d9d9;
 }
 .calculator .formula {
   background: white;
@@ -60,14 +97,21 @@
   border-radius: 8px;
   outline: none;
   width: 100%;
+  background: inherit;
+  color: inherit;
 }
 .calculator .formula__input::-webkit-outer-spin-button, .calculator .formula__input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+.calculator .formula__input-wrapper.dark-theme {
+  background: #404040;
+  color: #d9d9d9;
+  border: 0.5px solid #1a1a1a;
+}
 .calculator .formula__input-wrapper {
   background: white;
-  border: 0.5px solid #171717;
+  border: 0.5px solid #1a1a1a;
   border-radius: 8px;
   display: flex;
   justify-content: space-between;
@@ -75,13 +119,21 @@
   border-bottom: 1px #454545 solid;
   cursor: text;
 }
+.calculator .formula__input-unit.dark-theme {
+  color: #d9d9d9;
+}
 .calculator .formula__input-unit {
   padding-right: 0.5rem;
   display: block;
   white-space: nowrap;
+  color: inherit;
 }
 .calculator .formula__result-name {
   margin-right: 0.5rem;
+}
+.calculator .formula__result-section.dark-theme {
+  color: #d9d9d9;
+  background: #324B4C;
 }
 .calculator .formula__result-section {
   margin-top: 2rem;
@@ -95,19 +147,28 @@
   color: white;
 }
 .calculator .formula__input-unit {
-  color: #171717;
+  color: #1a1a1a;
+}
+.calculator .formula .result.dark-theme {
+  color: inherit;
 }
 .calculator .formula .result {
+  color: #1a1a1a;
   text-align: center;
   pointer-events: none;
   min-width: 50px;
   width: 90px;
 }
 
+.fuel-prices.dark-theme {
+  background: #333333;
+  color: #d9d9d9;
+}
+
 .fuel-prices {
   grid-column: 1;
   grid-row: 2;
-  background: white;
+  background: #f2f2f2;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border-radius: 16px;
   padding: 1rem;
@@ -130,11 +191,20 @@
   align-items: center;
   justify-content: center;
 }
+.fuel-prices .price:first-child.dark-theme {
+  background-color: green;
+}
 .fuel-prices .price:first-child {
   background-color: #009900;
 }
+.fuel-prices .price:nth-child(2).dark-theme {
+  background: #006600;
+}
 .fuel-prices .price:nth-child(2) {
-  background: #008500;
+  background: green;
+}
+.fuel-prices .price:nth-child(3).dark-theme {
+  background: #4d4d4d;
 }
 .fuel-prices .price:nth-child(3) {
   background: #333333;
@@ -142,11 +212,14 @@
 .fuel-prices .price:nth-child(4) {
   background: #262626;
 }
+.fuel-prices .price:nth-child(5).dark-theme {
+  background: #1a85ff;
+}
 .fuel-prices .price:nth-child(5) {
   background: #3392ff;
 }
 .fuel-prices .price:hover {
-  opacity: 90%;
+  opacity: 0.85;
 }
 .fuel-prices .price__fuel-name {
   margin-bottom: 0.5rem;
@@ -154,6 +227,11 @@
 .fuel-prices .price__amount {
   font-size: 1.25rem;
   font-weight: bold;
+}
+
+.blog.dark-theme {
+  background: #333333;
+  color: #d9d9d9;
 }
 
 .blog {
@@ -195,16 +273,33 @@
   .calculator .formula {
     padding: 2rem;
   }
+  .calculator .formula__title {
+    font-size: 2rem;
+  }
+  .calculator .formula__label {
+    font-size: 1rem;
+  }
 
   .fuel-prices {
     padding: 2rem;
   }
   .fuel-prices h2 {
     margin-bottom: 2rem;
+    font-size: 2rem;
   }
 
   .blog {
     padding: 2rem;
+  }
+  .blog__title {
+    font-size: 2rem;
+  }
+  .blog .article__title {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+  .blog .article__content {
+    font-size: 1.1rem;
   }
 }
 @media (min-width: 992px) {
