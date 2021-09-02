@@ -49,7 +49,6 @@ const Price = ({name, price, currency, color, setFuelPrice}) => {
         <div className="price" style={{color: color}} onClick={() => setFuelPrice(price)}>
             <span className='price__fuel-name'>{name}</span>
             <span className="price__amount">{price + ' ' + currency}</span>
-            {/* <span className="price__currency">zł</span> */}
         </div>
     )
 }

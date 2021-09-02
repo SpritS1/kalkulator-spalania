@@ -156,7 +156,7 @@
         justify-content: center;
         align-items: center;
         border-radius: 16px;
-        padding: .5rem 2rem;
+        padding: .5rem 1rem;
         background: $accent-color;
         color: $white;
       }
@@ -188,7 +188,7 @@
 .fuel-prices {
   grid-column: 1;
   grid-row: 2;
-  background: $white-accent;
+  background: $white;
   box-shadow: $box-shadow;
   border-radius: 16px;
   padding: 1rem;

@@ -47,15 +47,13 @@ const FuelCalc = ({fuelPrice, setFuelPrice}) => {
                     </div>
 
                     <div className="formula__result-section">
-
-                    <span className="formula__result-name">Koszt paliwa: </span>
+                        <span className="formula__result-name">Koszt paliwa: </span>
 
                         <div className="formula__input-wrapper">
                             <input type="text" className="formula__input result" value={fuelCost} readOnly/>     
                             <span className='formula__input-unit'>ZŁ</span>        
                         </div>         
                     </div>
-
                 </form>                
             </div>
 
