@@ -2,7 +2,6 @@
 @use './base/variables.scss' as *;
 
 * {
-  transition: background-color .2s;
   transition: color .1s;
 }
 
@@ -13,7 +12,6 @@
 .app {
     width: 100%;
     min-height: 100vh;
-    transition: background-color .2s;
   }
 
   .navbar.dark-theme {
