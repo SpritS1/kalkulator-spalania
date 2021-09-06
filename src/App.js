@@ -1,19 +1,22 @@
 import FuelCalc from './components/FuelCalc';
 import FuelPrices from './components/FuelPrices';
 import Footer from './components/Footer';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import './css/App.css';
 import Navbar from './components/Navbar/Navbar';
+import FuelPriceContextProvider from './contexts/FuelPriceContext';
 
 function App() {
-  const [fuelPrice, setFuelPrice] = useState('');
+  // const [fuelPrice, setFuelPrice] = useState('');
 
   return (
     <div className="app">
       <Navbar />
       <div className="home">
-        <FuelCalc fuelPrice={fuelPrice} setFuelPrice={setFuelPrice}/>
-        <FuelPrices setFuelPrice={setFuelPrice}/>
+        <FuelPriceContextProvider>
+          <FuelCalc/>
+          <FuelPrices/>          
+        </FuelPriceContextProvider>
 
         <section className="blog">
           <h2 className="blog__title">Jak zmniejszyc spalanie paliwa?</h2>

@@ -1,4 +1,9 @@
-const FuelPrices = ({fuelPrice, setFuelPrice}) => {
+import { useContext } from "react";
+import { FuelPriceContext } from "../contexts/FuelPriceContext";
+
+const FuelPrices = (props) => {
+    const {setFuelPrice} = useContext(FuelPriceContext)
+    
     const fuelPrices = [
         {
             id: 1,

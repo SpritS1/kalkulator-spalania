@@ -1,7 +1,9 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import { FuelPriceContext } from "../contexts/FuelPriceContext";
 
-const FuelCalc = ({fuelPrice, setFuelPrice}) => {
-    // const [fuelPrice, setFuelPrice] = useState('');
+const FuelCalc = (props) => {
+    const {fuelPrice, setFuelPrice} = useContext(FuelPriceContext)
+
     const [distance, setDistance] = useState('');
     const [avgFuelUsage, setAvgFuelUsage] = useState('');
     const [fuelCost, setFuelCost] = useState('');
