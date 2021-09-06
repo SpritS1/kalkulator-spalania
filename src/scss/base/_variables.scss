@@ -7,14 +7,15 @@ $light-gray: hsl(0, 0%, 80%);
 $white-accent: hsl(0, 0%, 95%);
 $white: hsl(0, 0%, 100%);
 // $red: hsl(345, 100%, 43%);
-$blue: hsl(215, 26%, 30%);
+$blue: linear-gradient(to left top, #516076, #4c5c72, #48576d, #435369, #3f4f65, #3c4c63, #394a62, #364760, #334660, #314460, #2e4360, #2b4160);
 
 // Dark theme
 
 $bg-dark: hsl(0, 0%, 15%);
 $bg-accent-dark: hsl(0, 0%, 20%);
 // $accent-dark: #324B4C;
-$accent-dark: hsl(35, 80%, 38%);
+$accent-dark: linear-gradient(to left top, #cf8e36, #cc8c33, #ca8931, #c7872e, #c5852b, #c28228, #c08025, #bd7d22, #b9791e, #b5751b, #b27217, #ae6e13);
+// hsl(35, 80%, 38%)
 
 $text-dark: hsl(0, 0%, 85%);
 $input-bg: hsl(0, 0%, 25%);

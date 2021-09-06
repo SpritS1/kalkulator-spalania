@@ -19,13 +19,13 @@
 }
 
 .navbar.dark-theme {
-  background: #ae6e13;
+  background: linear-gradient(to left top, #cf8e36, #cc8c33, #ca8931, #c7872e, #c5852b, #c28228, #c08025, #bd7d22, #b9791e, #b5751b, #b27217, #ae6e13);
   color: white;
 }
 
 .navbar {
   padding: 1rem;
-  background: #394960;
+  background: linear-gradient(to left top, #516076, #4c5c72, #48576d, #435369, #3f4f65, #3c4c63, #394a62, #364760, #334660, #314460, #2e4360, #2b4160);
   color: white;
 }
 .navbar__content {
@@ -105,7 +105,7 @@
 .calculator .formula__input-wrapper.dark-theme {
   background: #404040;
   color: #d9d9d9;
-  border: 0.5px solid #1a1a1a;
+  border: none;
 }
 .calculator .formula__input-wrapper {
   background: white;
@@ -131,7 +131,7 @@
 }
 .calculator .formula__result-section.dark-theme {
   color: #d9d9d9;
-  background: #ae6e13;
+  background: linear-gradient(to left top, #cf8e36, #cc8c33, #ca8931, #c7872e, #c5852b, #c28228, #c08025, #bd7d22, #b9791e, #b5751b, #b27217, #ae6e13);
 }
 .calculator .formula__result-section {
   margin-top: 2rem;
@@ -141,7 +141,7 @@
   align-items: center;
   border-radius: 16px;
   padding: 0.5rem 1rem;
-  background: #394960;
+  background: linear-gradient(to left top, #516076, #4c5c72, #48576d, #435369, #3f4f65, #3c4c63, #394a62, #364760, #334660, #314460, #2e4360, #2b4160);
   color: white;
 }
 .calculator .formula__input-unit {

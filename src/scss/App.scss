@@ -115,7 +115,8 @@
         &-wrapper.dark-theme {
           background: $input-bg;
           color: $text-dark;
-          border: .5px solid $black;
+          // border: .5px solid $black;
+          border: none;
         }
 
         &-wrapper {
