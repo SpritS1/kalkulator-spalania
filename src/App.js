@@ -1,13 +1,11 @@
 import FuelCalc from './components/FuelCalc';
 import FuelPrices from './components/FuelPrices';
 import Footer from './components/Footer';
-import { useState } from 'react';
 import './css/App.css';
 import Navbar from './components/Navbar/Navbar';
 import FuelPriceContextProvider from './contexts/FuelPriceContext';
 
 function App() {
-  // const [fuelPrice, setFuelPrice] = useState('');
 
   return (
     <div className="app">
